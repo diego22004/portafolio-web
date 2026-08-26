@@ -1,0 +1,240 @@
+/* Variables de Color (Tema Oscuro para Programadores) */
+:root {
+    --bg-color: #0a192f;        /* Azul marino muy oscuro */
+    --card-bg: #112240;         /* Azul marino un poco más claro para tarjetas */
+    --text-main: #ccd6f6;       /* Texto gris muy claro/blanco */
+    --text-muted: #8892b0;      /* Texto gris apagado para párrafos */
+    --accent: #64ffda;          /* Cian/Neón para botones y detalles */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 0 10%;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.greeting {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: clamp(40px, 8vw, 70px);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: clamp(30px, 6vw, 50px);
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+/* Botones */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.btn-outline {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+}
+
+.btn-outline:hover {
+    background-color: #a8b2d1;
+}
+
+/* Títulos de Sección */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: #233554;
+    margin-left: 20px;
+}
+
+/* Tarjetas de Proyectos */
+.projects-section {
+    padding: 100px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+.project-overline {
+    color: var(--accent);
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.link-icon {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.link-icon:hover {
+    color: var(--accent);
+}
+
+/* Footer / Contacto */
+.footer {
+    text-align: center;
+    padding: 100px 0 50px 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer .section-title {
+    justify-content: center;
+}
+
+.footer .section-title::after {
+    display: none;
+}
+
+.footer p {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.social-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
