@@ -238,3 +238,12 @@ nav {
 .social-links a:hover {
     color: var(--accent);
 }
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid #007bff; /* Cambia este código hexadecimal por el color exacto que usas en tu clase .accent */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
